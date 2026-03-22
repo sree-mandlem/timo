@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #6366f1;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  @apply bg-gray-50 text-gray-900;
+}
+
+.dark body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+@layer utilities {
+  .accent-bg { background-color: var(--accent); }
+  .accent-text { color: var(--accent); }
+  .accent-border { border-color: var(--accent); }
+  .accent-ring { --tw-ring-color: var(--accent); }
+}
+
+/* ── TipTap note editor prose styles ─────────────────────────── */
+.prose ul { list-style-type: disc; padding-left: 1.2em; margin: 0.25em 0; }
+.prose ol { list-style-type: decimal; padding-left: 1.2em; margin: 0.25em 0; }
+.prose li { margin: 0.1em 0; }
+.prose strong { font-weight: 700; }
+.prose em { font-style: italic; }
+.prose u { text-decoration: underline; }
+.prose s { text-decoration: line-through; }
+.prose code { font-family: ui-monospace, monospace; font-size: 0.85em; background: rgba(0,0,0,0.08); border-radius: 3px; padding: 0.1em 0.3em; }
+.dark .prose code { background: rgba(255,255,255,0.1); }
+.prose p { margin: 0.15em 0; }
